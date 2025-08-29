@@ -1,17 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Site</title>
-    <!-- Don't forget to link the CSS file here! -->
+    <title>Secret Pen Pal Club</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Add in <head> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Business name 🌻</h1>
+    <!-- Header / Hero -->
+    <header class="hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="assets/my-penpal.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="wrapper">
+        <h1>Rediscover the Joy of Real Connection ✉️</h1>
+        <p>
+          Join the Secret Pen Pal Club and get matched with someone new from
+          around the world.
+        </p>
+        <a href="#join" class="btn">Join the Club</a>
+      </div>
+    </header>
 
-    <!-- Video or image as a header is cool :) -->
+    <!-- About -->
+    <section class="about">
+      <div class="wrapper">
+        <h2>About the Club</h2>
+        <p>
+          We’re bringing back the excitement of opening the mailbox. The Secret
+          Pen Pal Club connects kindred spirits through handwritten letters,
+          postcards, and a little mystery.
+        </p>
+      </div>
+    </section>
 
-    <!-- Signup form -->
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <div class="wrapper">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <h3>✍️ Sign Up</h3>
+            <p>Tell us a little about yourself.</p>
+          </div>
+          <div class="step">
+            <h3>🌍 Get Matched</h3>
+            <p>We’ll connect you with your secret pen pal.</p>
+          </div>
+          <div class="step">
+            <h3>💌 Start Writing</h3>
+            <p>Letters, doodles, or postcards — your choice!</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Join Form -->
+    <section class="join">
+      <!-- Floating doodles -->
+      <span class="doodle doodle-envelope">✉️</span>
+      <span class="doodle doodle-stamp">📬</span>
+      <span class="doodle doodle-heart">💌</span>
+      <div class="wrapper">
+        <h2>Become a Pen Pal</h2>
+        <p>
+          Fill in a few details and we’ll match you with your secret pen pal.
+        </p>
+
+        <form
+          class="penpal-form"
+          action="https://httpbin.org/anything"
+          method="post"
+        >
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="address">Mailing Address</label>
+          <textarea id="address" name="address" required></textarea>
+
+          <!-- Radio buttons grouped with fieldset -->
+          <fieldset>
+            <legend>Letter Preferences</legend>
+            <label>
+              <input type="radio" name="preferences" value="letters" checked />
+              Letters
+            </label>
+            <label>
+              <input type="radio" name="preferences" value="postcards" />
+              Postcards
+            </label>
+            <label>
+              <input type="radio" name="preferences" value="digital" />
+              Digital Only
+            </label>
+          </fieldset>
+
+          <!-- Checkboxes grouped with fieldset -->
+          <fieldset>
+            <legend>Interests (choose all that apply)</legend>
+            <label>
+              <input type="checkbox" name="topics" value="books" />
+              Books
+            </label>
+            <label>
+              <input type="checkbox" name="topics" value="travel" />
+              Travel
+            </label>
+            <label>
+              <input type="checkbox" name="topics" value="art" />
+              Art
+            </label>
+            <label>
+              <input type="checkbox" name="topics" value="music" />
+              Music
+            </label>
+          </fieldset>
+
+          <label for="information">Other information you want to share</label>
+          <textarea id="information" name="information"></textarea>
+
+          <button type="submit" class="btn">Join the Club</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="wrapper">
+        <p>© 2025 Secret Pen Pal Club ✉️</p>
+        <p>A little mystery, a little friendship, and a lot of stamps.</p>
+      </div>
+    </footer>
   </body>
 </html>
